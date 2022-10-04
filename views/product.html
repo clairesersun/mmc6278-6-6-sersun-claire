@@ -1,0 +1,56 @@
+<!-- 👇Remove this markup when converting to a handlebars template 👇 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>Music Store</title>
+</head>
+<body>
+<!-- 👆Remove this markup when converting to a handlebars template👆 -->
+  <header>
+  <div class="header-container">
+    <a href="/">
+      <h1 class="logo">Music Shop🎸</h1>
+    </a>
+    <!-- replace with cartCount -->
+    <a href="/cart" class="cart-link">Cart (7)</a>
+  </div>
+</header>
+<main>
+  <section id="product-container">
+    <!-- replace with product image and name -->
+    <img src="/images/strat.jpg" alt="Stratocaster"/>
+    <!-- replace form action id # with product id -->
+      <form method="POST" action="/api/cart?inventoryId=1">
+        <!-- replace with product name -->
+        <h2>Stratocaster</h2>
+        <!-- replace with product description -->
+        <p>One of the most iconic electric guitars ever made.</p>
+        <!-- replace with product price -->
+        <p>$599.99</p>
+        <label for="quantity-input">
+          Quantity
+    <!-- replace max input attribute with quantity -->
+          <input
+            name="quantity"
+            id="quantity-input"
+            type="number"
+            min="1"
+            value="1"
+            max="3" />
+        </label>
+        <button>Add to Cart</button>
+      </form>
+  </section>
+  <a href="/" id="returnToStore">Return to Store Page</a>
+</main>
+<footer>
+  <p>&copy; Music Shop</p>
+</footer>
+<!-- 👇Remove this markup when converting to a handlebars template 👇 -->
+</body>
+</html>
+<!-- 👆Remove this markup when converting to a handlebars template👆 -->

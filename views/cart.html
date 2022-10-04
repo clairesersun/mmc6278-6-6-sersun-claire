@@ -1,0 +1,81 @@
+<!-- 👇Remove this markup when converting to a handlebars template 👇 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>Music Store</title>
+</head>
+<body>
+<!-- 👆Remove this markup when converting to a handlebars template👆 -->
+  <header>
+  <div class="header-container">
+    <a href="/">
+      <h1 class="logo">Music Shop🎸</h1>
+    </a>
+  </div>
+</header>
+<main>
+  <h2>Cart</h2>
+  <p>
+    <a href="/">Return to Store Page</a>
+  </p>
+  <section id="cart">
+    <div class="cart-items">
+<!-- TODO: 👇Use a handlebars each helper to loop over cart items👇 -->
+        <div class="cart-item">
+    <!-- replace with inventoryId -->
+          <a
+            href="/product/1"
+            class="cart-item-info">
+    <!-- replace with product image -->
+            <img src="/images/strat.jpg" alt="Stratocaster" />
+            <div>
+    <!-- replace with product name and price -->
+              <p>Stratocaster</p>
+              <p>$599.99</p>
+            </div>
+          </a>
+          <div class="cart-item-subtotal">
+            <div class="cart-item-controls">
+              <label>
+                Quantity
+<!-- replace with cart id, set max to inventoryQuantity, value to quantity -->
+                <input
+                  data-cart-id="1"
+                  type="number"
+                  min="0"
+                  max="3"
+                  value="1" />
+              </label>
+              <!-- replace with cart id -->
+              <button
+                class="remove-from-cart"
+                data-cart-id="1">
+                Remove
+              </button>
+            </div>
+<!-- replace with calculatedPrice -->
+            <p>$599.99</p>
+          </div>
+        </div>
+        <hr />
+<!-- TODO: 👆Use a handlebars each helper to loop over cart items👆 -->
+      <div class="cart-total">
+        <p>Total:</p>
+<!-- TODO: Replace with cart total -->
+        <p>$123.45</p>
+      </div>
+      <button id="emptyCart">Empty Cart</button>
+    </div>
+  </section>
+</main>
+<footer>
+  <p>&copy; Music Shop</p>
+</footer>
+<!-- 👇Remove this markup when converting to a handlebars template 👇 -->
+</body>
+</html>
+<!-- 👆Remove this markup when converting to a handlebars template👆 -->
