@@ -1,15 +1,3 @@
-<!-- 👇Remove this markup when converting to a handlebars template 👇 -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/style.css">
-  <title>Music Store</title>
-</head>
-<body>
-<!-- 👆Remove this markup when converting to a handlebars template👆 -->
   <header>
   <div class="header-container">
     <a href="/">
@@ -25,17 +13,18 @@
   <section id="cart">
     <div class="cart-items">
 <!-- TODO: 👇Use a handlebars each helper to loop over cart items👇 -->
+{{#each cartItems}}
         <div class="cart-item">
     <!-- replace with inventoryId -->
           <a
-            href="/product/1"
+            href="/product/{{inventoryId}}"
             class="cart-item-info">
     <!-- replace with product image -->
-            <img src="/images/strat.jpg" alt="Stratocaster" />
+            <img src="/images/{{image}}" alt="{{image}}" />
             <div>
     <!-- replace with product name and price -->
-              <p>Stratocaster</p>
-              <p>$599.99</p>
+              <p>{{name}}</p>
+              <p>${{price}}</p>
             </div>
           </a>
           <div class="cart-item-subtotal">
@@ -44,29 +33,30 @@
                 Quantity
 <!-- replace with cart id, set max to inventoryQuantity, value to quantity -->
                 <input
-                  data-cart-id="1"
+                  data-cart-id="{{id}}"
                   type="number"
                   min="0"
-                  max="3"
-                  value="1" />
+                  max="{{inventoryQuantity}}"
+                  value="{{quantity}}" />
               </label>
               <!-- replace with cart id -->
               <button
                 class="remove-from-cart"
-                data-cart-id="1">
+                data-cart-id="{{id}}">
                 Remove
               </button>
             </div>
 <!-- replace with calculatedPrice -->
-            <p>$599.99</p>
+            <p>${{calculatedPrice}}</p>
           </div>
         </div>
         <hr />
+        {{/each}}
 <!-- TODO: 👆Use a handlebars each helper to loop over cart items👆 -->
       <div class="cart-total">
         <p>Total:</p>
 <!-- TODO: Replace with cart total -->
-        <p>$123.45</p>
+        <p>${{total}}</p>
       </div>
       <button id="emptyCart">Empty Cart</button>
     </div>
@@ -75,7 +65,3 @@
 <footer>
   <p>&copy; Music Shop</p>
 </footer>
-<!-- 👇Remove this markup when converting to a handlebars template 👇 -->
-</body>
-</html>
-<!-- 👆Remove this markup when converting to a handlebars template👆 -->

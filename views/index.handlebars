@@ -1,0 +1,33 @@
+  <header>
+    <div class="header-container">
+      <a href="/">
+        <h1 class="logo">Music Shop🎸</h1>
+      </a>
+      <!-- TODO: Replace the below value with the real cart count -->
+      <a href="/cart" class="cart-link">Cart ({{cartCount}})</a>
+    </div>
+  </header>
+  <main>
+    <h2>Items for Sale</h2>
+    <section id="saleItems">
+<!-- TODO: 👇Use a handlebars each helper to loop over inventory items👇 -->
+{{#each rows}}
+      <!-- replace with product id -->
+      <a href="/product/{{id}}" class="sale-item">
+        <div class="item-img-container">
+          <!-- replace with product image and name -->
+          <img src="images/{{image}}" alt="{{name}}" />
+          <!-- replace with product description -->
+          <p>{{description}}</p>
+        </div>
+  <!-- replace with product name and price -->
+        <p>{{name}}</p>
+        <p>${{price}}</p>
+      </a>
+{{/each}}
+<!-- TODO: 👆Use a handlebars each helper to loop over inventory items👆 -->
+    </section>
+  </main>
+  <footer>
+    <p>&copy; Music Shop</p>
+  </footer>
